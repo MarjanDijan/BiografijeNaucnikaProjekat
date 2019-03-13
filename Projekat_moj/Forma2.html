@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Forma2</title>
+    <style>
+        .dugme{
+            background-color: gray;
+            color:white;
+            text-align: center;
+            display: inline-block;
+            padding: 10px;
+        }
+        .dugme:hover{
+            background-color: lightgray;
+        }
+        .dugme:action{
+            background-color: darkgray;
+        }
+        .hidden{
+            display: none;
+        }
+        .shown{
+            background-color: lightslategrey;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mladi istraživači</h1>
+    <div id='dugmici'>
+        <div id="dodaj" class='dugme'>Dodaj istrazivaca</div>
+        <div id="izlistaj" class='dugme'>Izlistaj istrazivace</div>
+    </div>
+    <p id='greska'></p>
+    <div id='forma' class='hidden'>
+        <form onsubmit="return provera()">
+            <label for="identifikator"></label>
+            <input type="text" id='identifikator' disabled>
+            <br>
+            <label for="name">Ime i prezime</label>
+            <br>
+            <input type="text" id='name'>
+            <br>
+            <br>
+            <label for="ustanova">Ustanova</label>
+            <br>
+            <input type="text" id='ustanova'>
+            <br>
+            <br>
+            <label for="biografija">Biografija</label>
+            <br>
+            <input type="text" id='biografija'>
+            <br>
+            <br>
+            <input type="submit" value='potvrdi' id='posalji'>
+            <input type="reset" value='odustani' id='odustani'>
+        </form>
+    </div>
+    <div id='lista' class='hidden'>
+        <table id='tabela'>
+            <caption>Spisak istrazivača</caption>
+            <tr>
+                <td>Redni broj</td><br>
+                <td>Ime i prezime</td><br>
+                <td>Ustanova</td><br><br>
+                <td>Biografija</td>    
+            </tr>
+        </table>
+    </div>
+    <script src="forma.js"></script>
+    
+</body>
+</html>
